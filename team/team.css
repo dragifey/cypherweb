@@ -1,0 +1,323 @@
+/*===== Setup / Root =====*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background);
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --z-index: 100;
+    --background: #F8F8F8;
+    --light-background: #F2F2F2;
+    --heading: #2C2C2C;
+    --light-font: #565656;
+    --lighter-font: #626262;
+    --light-yellow: #F6BD5D;
+    --yellow: #F1B24A;
+    --red: #F24443;
+
+    /* fonts */
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+
+    /* extra */
+    --width: calc(100% - 2rem);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.link.active{
+    color: var(--yellow);
+}
+
+/*===== Header =====*/
+
+.grid{
+    max-width: 1304px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: var(--width);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-index);
+    box-shadow: 0 1px 4px rgba(146,161,176,.15);
+    background-color: #fff;
+}
+
+.nav{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        position: fixed;
+        top: 3rem;
+        right: -100%;
+        width: 50%;
+        height: 100%;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.64);
+        backdrop-filter: blur(5px);
+        transition: .5s;
+    }
+}
+
+.item{
+    margin-bottom: 2rem;
+}
+
+.link{
+    position: relative;
+    color: #fff;
+    font-weight: var(--regular);
+    transition: .3s;
+}
+
+.invite{
+    padding: 8px 22px;
+    border: 2px solid var(--yellow);
+    border-radius: 50px;
+    font-weight: var(--medium);
+    color: #fff;
+    
+}
+
+.invite:hover{
+    background-color: rgba(241, 178, 74, 0.10);
+}
+
+.logo{
+    color: #000;
+    font-weight: var(--semi-bold);
+    font-size: 1.3rem;
+}
+.toggle{
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.show{
+    right: 0;
+}
+
+
+
+/* team */
+
+.team{
+    text-align: center;
+}
+
+.team .wrapper{
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 30px;
+}
+
+.center .title{
+    font-weight: var(--semi-bold);
+    font-size: 31px;
+    margin: 85px 0px 15px 0px;
+    position: relative;
+} 
+
+.center .description{
+    font-size: 18px;
+    font-weight: var(--medium);
+    margin-bottom: 34px;
+}
+
+.member{
+    float: left;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.member img{
+    width: 180px;
+    height: 180px;
+    border-radius: 61px;
+}
+
+.name{
+    margin: 13px 0px 12px 0px;
+    color: var(--heading);
+    font-weight: var(--semi-bold);
+    font-size: 22px;
+    text-transform: lowercase;
+}
+
+.position{
+    font-weight: var(--medium);
+    color: var(--light-font);
+    font-size: 17px;
+    text-transform: lowercase;
+}
+
+
+
+/*===== footer =====*/
+
+.footer{
+    padding: 40px;
+}
+
+.footer .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+}
+
+.links a{
+    color: var(--red);
+    font-weight: var(--medium);
+}
+
+.credits{
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+    color: var(--lighter-font);
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.credits a{
+    color: var(--red);
+}
+
+
+
+/*===== media queries =====*/
+
+@media screen and (min-width: 768px){
+    .nav{
+        height: calc(3rem + 1rem);
+    }
+    .list{
+        display: flex;
+        padding-top: 0;
+    }
+    .item{
+        margin-left: 3rem;
+        margin-bottom: 0;
+    }
+    .toggle{
+        display: none;
+    }
+    .link{
+        color: #000;
+    }
+    .invite{
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .links{
+        display: none;
+    }
+    .copyright{
+        text-align: center;
+    }
+}
+
+
+/* avatar go down now. */
+
+@media screen and (max-width: 800px){
+    .member{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px){
+	.member{
+		width: 100%;
+	}
+}
+
+/*===== keyframes =====*/
+
+@keyframes fadeOut{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/*===== loader =====*/
+
+.loader{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader.hidden{
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+.loader img{
+    width: 200px;
+    filter: invert(1);
+}

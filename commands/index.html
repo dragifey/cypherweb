@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cypher | Commands</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="commands.css">
+        <script src="/js/lazysizes.min.js" async=""></script>
+        <!-- =====BOX ICONS===== -->
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+        <!-- =====EMBED PREVIEW===== -->    
+        <meta property="og:type"
+              content="website">
+        <meta property="theme-color"
+              content="#7289DC">
+        <meta name="og:title"
+              content="Cypher - Multipurpose Discord Bot">      
+        <meta name="og:description"
+              content="All of Cypher's current commands.">
+        <meta name="og:image" 
+              content="/favicon.ico">
+        <meta name="og:icon" 
+              content="/favicon.ico"> 
+        <meta name="og:thumbnail" 
+              content="/favicon.ico">
+        <!-- =====TWITER PREVIEW===== -->  
+        <meta name="twitter:card"
+             content="app">  
+        <meta name="twitter:title"
+             content="Cypher - Multipurpose Discord Bot">  
+        <meta name="twitter:description"
+             content="All of Cypher's current commands.">
+        <meta name="twitter:image" 
+              content="/favicon.ico">
+        <meta name="twitter:icon" 
+              content="/favicon.ico">
+        <meta name="twitter:thumbnai" 
+              content="/favicon.ico">        
+    </head>
+    <body>
+
+        <div class="loader">
+            <img data-src="/images/loader.gif" alt="Loading Cypher Logo" class="logo lazyload">
+        </div>
+
+        <!--===== HEADER =====-->
+        <div class="header">
+            <div class="nav grid">
+                <div>
+                    <a href="/" class="logo">Cypher</a>
+                </div>
+
+                <div class="menu" id="menu">
+                    <ul class="list">
+                        <li class="item"><a href="/" class="link">Home</a></li>
+                        <li class="item"><a href="#" class="link active">Commands</a></li>
+                        <li class="item"><a href="https://status.cypherbot.org/" target="_blank" rel="noopener" class="link">Status</a></li>
+                        <li class="item"><a href="/team" class="link">Team</a></li>
+                        <li class="item"><a href="https://cypherbot.org/support" class="link" target="_blank" rel="noopener">Support</a></li>
+                        <li class="item"><a href="https://cypherbot.org/invite" class="link invite" target="_blank" rel="noopener">Invite</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="toggle" id="burger">
+                    <i class="bx bx-menu"></i>
+                </div>
+
+            </div>
+        </div>        
+
+
+        <!--===== CATEGORIES =====-->        
+
+        <div class="intro">
+            <h2 class="title">Commands</h2>
+        </div>
+
+        <div class="main">
+
+            <div id="categories">
+                <p class="btn highlight" onclick="filterSelection('all')">All</p>
+                <p class="btn" onclick="filterSelection('mod')">Mod</p>
+                <p class="btn" onclick="filterSelection('util')">Util</p>
+                <p class="btn" onclick="filterSelection('fun')">Fun</p>
+            </div>
+
+
+
+            <div class="container">
+
+                <div class="command mod">
+                    <div class="box"> 
+
+                        <div class="text">
+                            <i class="bx bxs-chevron-right"></i>
+                            <h4>userinfo <span class="subs">[member]</span></h4>
+                        </div>
+
+                        <div class="body">
+                            <div class="inside">
+                                <p class="info">Display's any user's information profile</p>
+                                <p class="alias">Alias: user, info</p>
+                            </div>
+                            <div class="usage">
+                                <p>/userinfo <code>@dragonic#8588</code></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="command util">
+                    <div class="box"> 
+
+                        <div class="text">
+                            <i class="bx bxs-chevron-right"></i>
+                            <h4>boostinfo <span class="subs">[member]</span></h4>
+                        </div>
+
+                        <div class="body">
+                            <div class="inside">
+                                <p class="info">Display's any user's information profile</p>
+                                <p class="alias">Alias: user, info</p>
+                            </div>
+                            <div class="usage">
+                                <p>/userinfo <code>@dragonic#8588</code></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="command fun">
+                    <div class="box"> 
+
+                        <div class="text">
+                            <i class="bx bxs-chevron-right"></i>
+                            <h4>cowboy <span class="subs">[member]</span></h4>
+                        </div>
+
+                        <div class="body">
+                            <div class="inside">
+                                <p class="info">Display's any user's information profile</p>
+                                <p class="alias">Alias: user, info</p>
+                            </div>
+                            <div class="usage">
+                                <p>/userinfo <code>@dragonic#8588</code></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="wrapper">
+                <div class="copyright">
+                    Copyright &copy; 2020 Cypher. All rights Reserved
+                </div>
+                <div class="links">
+                    <a href="/policies/privacy/">Terms of Service</a>&nbsp;|&nbsp;<a href="/policies/">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="credits">
+            <i class="bx bx-code-alt"></i>
+                with
+            <i class="bx bxs-heart" ></i>
+                by
+            <span><a href="#">dragonic#8588</a></span>                
+        </div>
+
+        <script src="filter.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
