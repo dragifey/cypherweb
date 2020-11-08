@@ -296,6 +296,14 @@ a{
     }
 }
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
 
 /*===== loader =====*/
 
@@ -318,6 +326,9 @@ a{
 }
 
 .loader img{
-    width: 200px;
     filter: invert(1);
+}
+
+.loader .avatar{
+    animation: rotate 10s linear infinite;
 }
